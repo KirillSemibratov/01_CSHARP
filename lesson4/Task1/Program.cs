@@ -1,16 +1,15 @@
 ﻿int[,] matrix = new int[3, 5];
-
 Random rnd = new Random();
-for (int i = 0; i > matrix.GetLength(0); i++)
+for (int i = 0; i < matrix.GetLength(0); i++)
 {
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int j = 0; j < matrix.GetLength(1); i++)
     {
 
         matrix[i, j] = rnd.Next(1, 11);
     }
 }
 
-for (int i = 0; i > matrix.GetLength(0); i++)
+for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
@@ -19,25 +18,24 @@ for (int i = 0; i > matrix.GetLength(0); i++)
     Console.WriteLine();
 }
 
-int [,] CreateMatrix (int rowCount, int columsCount)
+int[,] CreateMatrix(int rowsCount, int columsCount)
 {
-    int[,] matrix = new int[rowCount, columsCount];
 
+    int[,] matrix = new int[rowsCount, columsCount];
     Random rnd = new Random();
-    for (int i = 0; i > matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-
             matrix[i, j] = rnd.Next(1, 11);
         }
     }
-    return matrix; 
+    return matrix;
 }
 
 void ShowMatrix(int[,] matrix)
 {
-    for (int i = 0; i > matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
@@ -46,6 +44,8 @@ void ShowMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+return matrix;
 
 int[,] matrix = CreateMatrix(4, 5);
+
 ShowMatrix(matrix);
